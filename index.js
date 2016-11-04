@@ -12,35 +12,24 @@ import {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.inter = null;
-    this.state = {
-      num: 0
-    };
   }
   render() {
     return (
       <View style={styles.container}>
-        <Text>测试应用</Text>
-        <Text>{this.state.num}</Text>
-        <TouchableOpacity
-          onPress={this.props.onClose}>
-          <Text>关闭</Text>
-        </TouchableOpacity>
+        <Text>Hello World!</Text>
       </View>
     );
   }
 
   componentDidMount() {
-    this.inter = setInterval(() => {
-      this.setState({
-        num: this.state.num + 1
-      });
-    }, 1000);
-  }
-
-  componentWillUnmount() {
-    console.log('bye bye');
-    clearInterval(this.inter);
+    const { setBottomBarStyle } = this.props;
+    console.log('setBottomBarStyle=', setBottomBarStyle);
+    window.setBottomBarStyle = setBottomBarStyle;
+    this.props.setBottomBarStyle({
+      color: '#09F',
+      borderColor: '#EEE',
+      backgroundColor: '#FFF'
+    })
   }
 }
 
