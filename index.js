@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>点击底部按钮试试！</Text>
+        <Text>点击底部按钮试试😊</Text>
         <Text>{this.state.status}</Text>
       </View>
     );
