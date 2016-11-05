@@ -29,7 +29,7 @@ class App extends Component {
     const { setBottomBarStyle, regOnBack, regOnAction } = this.props;
     setBottomBarStyle && setBottomBarStyle({
       color: '#09F',
-      borderColor: '#EEE',
+      borderColor: '#09F',
       backgroundColor: '#FFF'
     });
     
