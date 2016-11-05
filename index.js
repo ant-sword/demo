@@ -6,7 +6,6 @@ import {
   StyleSheet,
   View,
   Text,
-  TouchableOpacity,
 } from 'react-native';
 
 class App extends Component {
